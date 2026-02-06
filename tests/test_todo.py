@@ -1,5 +1,4 @@
 import os.path
-import pytest
 from selene import browser, have, be, by, command, query
 
 #локаторы
@@ -57,7 +56,7 @@ def test_subject(data_user):
     hobbies_checkbox_1.click()
 
 def test_file():
-    testfile = os.path.abspath('test_data/image/testimage.png')
+    testfile = os.path.abspath('../test_data/image/testimage.png')
     uploadPicture.send_keys(testfile)
 
 def test_address(data_user):
