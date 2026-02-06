@@ -126,4 +126,4 @@ def test_closemodal():
     modalka.should(be.not_.visible)
 
 def test_conflict():
-    print('Бибизяны в опастности')
+    print('Бибизян в опастности')
