@@ -128,3 +128,4 @@ def test_closemodal():
 def test_neconflict():
     print('Бибизян в опастности')
     print('asdasx')
+    print('asdassdcsx')
