@@ -125,5 +125,5 @@ def test_closemodal():
     button_close_modal.perform(command.js.scroll_into_view).click()
     modalka.should(be.not_.visible)
 
-def test_conflict():
+def test_neconflict():
     print('Бибизяны в опастности')
