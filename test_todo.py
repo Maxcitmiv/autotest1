@@ -2,22 +2,6 @@ import os.path
 import pytest
 from selene import browser, have, be, by, command, query
 
-@pytest.fixture
-def data_user():
-    return {
-        'fname': 'Maxim',
-        'lname':'Makak',
-        'email': 'sobaka@mail.ru',
-        'phone': '1234567890',
-        'year': 2002,
-        'month':'February',
-        'day': 8,
-        'subjects': 'Бибизяна',
-        'address': 'LasVegas, Советская, 25',
-        'sstate': 'NCR',
-        'ccity': 'Delhi',
-    }
-
 #локаторы
 firstName=browser.element('#firstName')
 lastName=browser.element('[placeholder="Last Name"]')
@@ -124,7 +108,3 @@ def test_modalwindow(data_user):
 def test_closemodal():
     button_close_modal.perform(command.js.scroll_into_view).click()
     modalka.should(be.not_.visible)
-
-def test_neconflict():
-    print('Бибизян в опастности')
-    print('asdasx')
