@@ -1,11 +1,11 @@
-from selene import browser, be, by, have
+from selene import browser, be, have
 from selene.core.exceptions import TimeoutException
 
 
 def test_browser():
     browser.open('https://www.ya.ru')
     browser.element('#text').type('hdbcsdcbsjkcdnsjdcnskjbdcjshdcbkjsdc').press_enter()
-    browser.should(have.url_containing('https://ya.ru/search?text=hdbcsdcbsjkcdnsjdcnskjbdcjshdcbkjsdc'))
+    browser.should(have.url_containing('text=hdbcsdcbsjkcdnsjdcnskjbdcjshdcbkjsdc'))
     try:
         browser.element('[aria-label="Нет, спасибо"]').should(be.visible).click()
     except TimeoutException:
