@@ -124,3 +124,6 @@ def test_modalwindow(data_user):
 def test_closemodal():
     button_close_modal.perform(command.js.scroll_into_view).click()
     modalka.should(be.not_.visible)
+
+def test_conflict():
+    print('Макаки нападают')
